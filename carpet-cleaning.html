@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carpet Cleaning — Indy Turnover Pros</title>
+  <meta name="description" content="Professional carpet cleaning in Indianapolis. Fast, reliable, and affordable. Traffic lanes, bedrooms, stairs, spot treatment, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: { 500: '#3c8bff', 400: '#5aa5ff' },
+            night: '#0b1220'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+  </style>
+</head>
+
+<body class="bg-night text-white font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-night/80 border-b border-white/10 z-40">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-between py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.png" alt="Indy Turnover Pros Logo" class="h-9 w-auto" />
+        <span class="text-xl font-extrabold tracking-tight">Indy Turnover Pros</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html#services">Services</a>
+        <a href="carpet-cleaning.html" class="text-brand-400 font-semibold">Carpet Cleaning</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-5xl font-black leading-tight tracking-tight">
+          Professional <span class="text-brand-400">Carpet Cleaning</span>  
+          for Homes & Rentals
+        </h1>
+        <p class="mt-6 text-white/70 text-lg max-w-xl">
+          Deep extraction cleaning for traffic lanes, bedrooms, stairs, and move-in / move-out units.
+          Fast scheduling, clear pricing, and dependable results every time.
+        </p>
+      </div>
+      <div>
+        <img src="logo.png" alt="Carpet Cleaning" class="mx-auto w-full max-w-md opacity-90" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CLEAN -->
+  <section class="py-20 lg:py-28" id="services">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Carpet Cleaning Services</h2>
+      <p class="mt-3 text-white/70 max-w-xl">
+        Built for homeowners, landlords, and property managers needing fast, reliable carpet cleaning.
+      </p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Traffic Lanes -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Traffic Lane Restoration</div>
+          <p class="mt-2 text-white/70">Hot water extraction to lift dirt and flatten patterns from heavy foot traffic.</p>
+        </div>
+
+        <!-- Bedrooms -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Bedrooms & Living Areas</div>
+          <p class="mt-2 text-white/70">Full-room extraction for fresh, clean carpets before move-in.</p>
+        </div>
+
+        <!-- Stairs -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Stairways (Treads & Risers)</div>
+          <p class="mt-2 text-white/70">Precision cleaning on each stair tread and riser for a uniform finish.</p>
+        </div>
+
+        <!-- Hallways -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Hallways & Transitions</div>
+          <p class="mt-2 text-white/70">High-traffic connectors cleaned thoroughly end-to-end.</p>
+        </div>
+
+        <!-- Baseboards -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Edge & Baseboard Detailing</div>
+          <p class="mt-2 text-white/70">Crevice tool deep cleans carpet edges and along baseboards.</p>
+        </div>
+
+        <!-- Spot Treatment -->
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl hover:shadow-glow transition">
+          <div class="text-lg font-semibold">Spot Treatment</div>
+          <p class="mt-2 text-white/70">Targeted stain removal & deodorizing (as scoped).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl font-extrabold">Request a Carpet Cleaning Quote</h2>
+
+        <form class="mt-8 grid gap-4 sm:grid-cols-2"
+              action="mailto:john@indyturnoverpros.com"
+              method="post"
+              enctype="text/plain">
+
+          <input required name="name" placeholder="Your name"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <input required type="email" name="email" placeholder="Your email"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <textarea required name="details" rows="5"
+            placeholder="Rooms, stairs, traffic lanes, pet stains, etc…"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
+
+          <button type="submit"
+            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">
+            Email My Request
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="text-lg font-bold">Contact</div>
+
+          <div class="mt-4 space-y-4 text-sm">
+            <div>
+              <div class="font-semibold">John — Admin / Client Relations</div>
+              <a href="mailto:john@indyturnoverpros.com" class="text-brand-400">
+                john@indyturnoverpros.com
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-10 text-center text-white/60 text-sm">
+    © <span id="y"></span> Indy Turnover Pros
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+  </script>
+
+</body>
+</html>
