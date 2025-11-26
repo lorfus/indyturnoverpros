@@ -162,16 +162,15 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
       <div class="lg:col-span-2">
         <h2 class="text-3xl font-extrabold">Get a Quote</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-  
+       <form action="https://api.web3forms.com/submit" method="POST">
   <!-- REQUIRED: your Web3Forms access key -->
   <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c">
 
-  <!-- Optional: email subject -->
+  <!-- Optional: subject line -->
   <input type="hidden" name="subject" value="New Indy Turnover Pros Inquiry">
 
-  <!-- Optional: redirect URL after form submission -->
-  <input type="hidden" name="redirect" value="https://indyturnoverpros.com/thank-you.html">
+  <!-- Optional: thank-you redirect (or remove if you don't have this page yet) -->
+  <!-- <input type="hidden" name="redirect" value="https://indyturnoverpros.com/thank-you.html"> -->
 
   <label>
     Your Name:
@@ -190,6 +189,7 @@
 
   <button type="submit">Send Message</button>
 </form>
+
 
       </div>
 
