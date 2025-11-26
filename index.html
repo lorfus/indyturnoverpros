@@ -162,12 +162,35 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
       <div class="lg:col-span-2">
         <h2 class="text-3xl font-extrabold">Get a Quote</h2>
-        <form class="mt-8 grid gap-4 sm:grid-cols-2" action="mailto:john@indyturnoverpros.com" method="post" enctype="text/plain">
-          <input required name="name" placeholder="Your name" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
-          <input required type="email" name="email" placeholder="Your email" class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
-          <textarea required name="details" rows="5" placeholder="Unit details, add-ons, notes…" class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
-          <button type="submit" class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">Email My Request</button>
-        </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+  
+  <!-- REQUIRED: your Web3Forms access key -->
+  <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c">
+
+  <!-- Optional: email subject -->
+  <input type="hidden" name="subject" value="New Indy Turnover Pros Inquiry">
+
+  <!-- Optional: redirect URL after form submission -->
+  <input type="hidden" name="redirect" value="https://indyturnoverpros.com/thank-you.html">
+
+  <label>
+    Your Name:
+    <input type="text" name="name" required>
+  </label>
+
+  <label>
+    Your Email:
+    <input type="email" name="email" required>
+  </label>
+
+  <label>
+    Job Details:
+    <textarea name="details" rows="5" required></textarea>
+  </label>
+
+  <button type="submit">Send Message</button>
+</form>
+
       </div>
 
       <div>
