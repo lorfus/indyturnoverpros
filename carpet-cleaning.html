@@ -131,60 +131,120 @@
           enctype="text/plain"
         >
           <!-- Basic Info -->
-          <input required name="name" placeholder="Your name"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            name="name"
+            placeholder="First and last name"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <input required type="email" name="email" placeholder="Your email"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder="Your email"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <input required name="phone" placeholder="Mobile phone (for confirmation text)"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            name="phone"
+            placeholder="Mobile phone (for confirmation text)"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
           <!-- Address -->
-          <input required name="address" placeholder="Service address (street, unit #)"
-            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            name="address"
+            placeholder="Service address (street, unit #)"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <!-- YES/NO Add-ons -->
-          <select name="additional_rooms"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-            <option value="" disabled selected>Any additional rooms beyond the 3 included?</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          <!-- YES/NO Add-ons with labels -->
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Any additional rooms beyond the 3 included?
+            </label>
+            <select
+              name="additional_rooms"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              <option value="" disabled selected>Select one</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
 
-          <select name="stairs"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-            <option value="" disabled selected>Stairs to be cleaned?</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Stairs to be cleaned?
+            </label>
+            <select
+              name="stairs"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              <option value="" disabled selected>Select one</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
 
-          <select name="pet_stains"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-            <option value="" disabled selected>Pet stains or odor issues?</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Pet stains or odor issues?
+            </label>
+            <select
+              name="pet_stains"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              <option value="" disabled selected>Select one</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
 
           <!-- Preferred Date & Time -->
-          <input required type="date" name="preferred_date"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2" />
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Preferred service date
+            </label>
+            <input
+              required
+              type="date"
+              name="preferred_date"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            />
+          </div>
 
-          <select required name="preferred_time"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-            <option value="" disabled selected>Select preferred time window</option>
-            <option value="Morning (8 AM – 12 PM)">Morning (8 AM – 12 PM)</option>
-            <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
-            <option value="Evening (4 PM – 8 PM)">Evening (4 PM – 8 PM)</option>
-          </select>
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Preferred time window
+            </label>
+            <select
+              required
+              name="preferred_time"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              <option value="" disabled selected>Select one</option>
+              <option value="Morning (8 AM – 12 PM)">Morning (8 AM – 12 PM)</option>
+              <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
+              <option value="Evening (4 PM – 8 PM)">Evening (4 PM – 8 PM)</option>
+            </select>
+          </div>
 
           <!-- Notes -->
-          <textarea name="notes" rows="4"
+          <textarea
+            name="notes"
+            rows="4"
             placeholder="Anything else we should know? (Parking, large furniture, heavy staining, pets, etc.)"
-            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          ></textarea>
 
-          <button type="submit"
-            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">
+          <button
+            type="submit"
+            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400"
+          >
             Submit My $159 Cleaning Request
           </button>
         </form>
