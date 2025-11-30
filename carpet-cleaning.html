@@ -1,105 +1,223 @@
-<section id="contact" class="py-20 lg:py-28">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
-    <div class="lg:col-span-2">
-      <h2 class="text-3xl font-extrabold">
-        Schedule Your $159 — 3-Room Carpet Cleaning
-      </h2>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carpet Cleaning — Indy Turnover Pros</title>
+  <meta name="description" content="Professional carpet cleaning in Indianapolis. 3-room $159 special for up to 600 sq ft. Traffic lanes, bedrooms, stairs, spot treatment, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: { 500: '#3c8bff', 400: '#5aa5ff' },
+            night: '#0b1220'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+  </style>
+</head>
+
+<body class="bg-night text-white font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-night/80 border-b border-white/10 z-40">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-between py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.png" alt="Indy Turnover Pros Logo" class="h-9 w-auto" />
+        <span class="text-xl font-extrabold tracking-tight">Indy Turnover Pros</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html#services">Services</a>
+        <a href="carpet-cleaning.html" class="text-brand-400 font-semibold">Carpet Cleaning</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-5xl font-black leading-tight tracking-tight">
+          Professional <span class="text-brand-400">Carpet Cleaning</span>
+          for Homes & Rentals
+        </h1>
+        <p class="mt-6 text-white/70 text-lg max-w-xl">
+          Deep extraction cleaning for traffic lanes, bedrooms, stairs, and move-in / move-out units.
+          Fast scheduling, clear pricing, and dependable results every time.
+        </p>
+      </div>
+      <div>
+        <img src="logo.png" alt="Carpet Cleaning" class="mx-auto w-full max-w-md opacity-90" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CLEAN -->
+  <section class="py-20 lg:py-28" id="services">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Carpet Cleaning Services</h2>
       <p class="mt-3 text-white/70 max-w-xl">
-        Special includes up to <strong>3 rooms</strong> and up to 
-        <strong>600 total square feet</strong>. Additional rooms, stairs, and pet issues will be quoted separately.
+        Built for homeowners, landlords, and property managers needing fast, reliable carpet cleaning.
       </p>
 
-      <form
-        class="mt-8 grid gap-4 sm:grid-cols-2"
-        action="mailto:john@indyturnoverpros.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <!-- Basic Info -->
-        <input required name="name" placeholder="Your name"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
-        
-        <input required type="email" name="email" placeholder="Your email"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-        <input required name="phone" placeholder="Mobile phone (for confirmation text)"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Traffic Lane Restoration</div>
+          <p class="mt-2 text-white/70">Hot water extraction for heavy foot traffic areas.</p>
+        </div>
 
-        <!-- Address -->
-        <input required name="address" placeholder="Service address (street, unit #)"
-          class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Bedrooms & Living Areas</div>
+          <p class="mt-2 text-white/70">Full-room extraction for fresh, clean carpets.</p>
+        </div>
 
-        <!-- Yes / No Add-Ons -->
-        <select name="additional_rooms"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-          <option value="" disabled selected>Any additional rooms beyond the 3 included?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Stair Cleaning</div>
+          <p class="mt-2 text-white/70">Each stair tread & riser cleaned thoroughly.</p>
+        </div>
 
-        <select name="stairs"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-          <option value="" disabled selected>Stairs to be cleaned?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Hallways & Transitions</div>
+          <p class="mt-2 text-white/70">High-traffic connectors cleaned end-to-end.</p>
+        </div>
 
-        <select name="pet_stains"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
-          <option value="" disabled selected>Pet stains or odor issues?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Edge & Baseboard Detailing</div>
+          <p class="mt-2 text-white/70">Crevice cleaning along walls and edges.</p>
+        </div>
 
-        <!-- Preferred Date & Time -->
-        <input
-          required
-          type="date"
-          name="preferred_date"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2"
-        />
-
-        <select
-          name="preferred_time"
-          class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2"
-          required
-        >
-          <option value="" disabled selected>Select preferred time window</option>
-          <option value="Morning (8 AM – 12 PM)">Morning (8 AM – 12 PM)</option>
-          <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
-          <option value="Evening (4 PM – 8 PM)">Evening (4 PM – 8 PM)</option>
-        </select>
-
-        <!-- Notes -->
-        <textarea name="notes" rows="4"
-          placeholder="Anything else we should know? (Parking, large furniture, heavy staining, etc.)"
-          class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
-
-        <button type="submit"
-          class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">
-          Submit My $159 Cleaning Request
-        </button>
-      </form>
-    </div>
-
-    <div>
-      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
-        <div class="text-lg font-bold">Contact</div>
-
-        <div class="mt-4 space-y-4 text-sm">
-          <div>
-            <div class="font-semibold">John — Admin / Client Relations</div>
-            <a href="mailto:john@indyturnoverpros.com" class="text-brand-400">
-              john@indyturnoverpros.com
-            </a>
-          </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Spot Treatment</div>
+          <p class="mt-2 text-white/70">Targeted stain removal & deodorizing.</p>
         </div>
 
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- CONTACT / QUOTE -->
+  <section id="contact" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl font-extrabold">
+          Schedule Your $159 — 3-Room Carpet Cleaning
+        </h2>
+        <p class="mt-3 text-white/70 max-w-xl">
+          Special includes up to <strong>3 rooms</strong> and up to <strong>600 total square feet</strong>.  
+          Additional rooms, stairs, or pet-related issues will be quoted separately.
+        </p>
+
+        <form
+          class="mt-8 grid gap-4 sm:grid-cols-2"
+          action="mailto:john@indyturnoverpros.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <!-- Basic Info -->
+          <input required name="name" placeholder="Your name"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <input required type="email" name="email" placeholder="Your email"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <input required name="phone" placeholder="Mobile phone (for confirmation text)"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <!-- Address -->
+          <input required name="address" placeholder="Service address (street, unit #)"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+
+          <!-- YES/NO Add-ons -->
+          <select name="additional_rooms"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
+            <option value="" disabled selected>Any additional rooms beyond the 3 included?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+          <select name="stairs"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
+            <option value="" disabled selected>Stairs to be cleaned?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+          <select name="pet_stains"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
+            <option value="" disabled selected>Pet stains or odor issues?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+          <!-- Preferred Date & Time -->
+          <input required type="date" name="preferred_date"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2" />
+
+          <select required name="preferred_time"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:col-span-2">
+            <option value="" disabled selected>Select preferred time window</option>
+            <option value="Morning (8 AM – 12 PM)">Morning (8 AM – 12 PM)</option>
+            <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
+            <option value="Evening (4 PM – 8 PM)">Evening (4 PM – 8 PM)</option>
+          </select>
+
+          <!-- Notes -->
+          <textarea name="notes" rows="4"
+            placeholder="Anything else we should know? (Parking, large furniture, heavy staining, pets, etc.)"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
+
+          <button type="submit"
+            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">
+            Submit My $159 Cleaning Request
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="text-lg font-bold">Contact</div>
+
+          <div class="mt-4 space-y-4 text-sm">
+            <div>
+              <div class="font-semibold">John — Admin / Client Relations</div>
+              <a href="mailto:john@indyturnoverpros.com" class="text-brand-400">
+                john@indyturnoverpros.com
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-10 text-center text-white/60 text-sm">
+    © <span id="y"></span> Indy Turnover Pros
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+  </script>
+
+</body>
+</html>
 
 
 
