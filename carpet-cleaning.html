@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carpet Cleaning — Indy Turnover Pros</title>
-  <meta name="description" content="Professional carpet cleaning in Indianapolis. Fast, reliable, and affordable. Traffic lanes, bedrooms, stairs, spot treatment, and more." />
+  <meta name="description" content="Professional carpet cleaning in Indianapolis. 3-room $159 special for up to 600 sq ft. Traffic lanes, bedrooms, stairs, spot treatment, and more." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <h1 class="text-5xl font-black leading-tight tracking-tight">
-          Professional <span class="text-brand-400">Carpet Cleaning</span>  
+          Professional <span class="text-brand-400">Carpet Cleaning</span>
           for Homes & Rentals
         </h1>
         <p class="mt-6 text-white/70 text-lg max-w-xl">
@@ -118,30 +118,143 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT / QUOTE SECTION -->
   <section id="contact" class="py-20 lg:py-28">
     <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
       <div class="lg:col-span-2">
-        <h2 class="text-3xl font-extrabold">Request a Carpet Cleaning Quote</h2>
+        <h2 class="text-3xl font-extrabold">Schedule Your $159 — 3-Room Carpet Cleaning</h2>
+        <p class="mt-3 text-white/70 max-w-xl">
+          Special includes up to 3 rooms or up to 600 sq ft. Additional rooms, stairs, and heavy pet treatments are quoted separately.
+        </p>
 
-        <form class="mt-8 grid gap-4 sm:grid-cols-2"
-              action="mailto:john@indyturnoverpros.com"
-              method="post"
-              enctype="text/plain">
+        <form
+          class="mt-8 grid gap-4 sm:grid-cols-2"
+          action="mailto:john@indyturnoverpros.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <!-- Contact info -->
+          <input
+            required
+            name="name"
+            placeholder="Your name"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <input required name="name" placeholder="Your name"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder="Your email"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <input required type="email" name="email" placeholder="Your email"
-            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" />
+          <input
+            required
+            name="phone"
+            placeholder="Mobile phone (for confirmation text)"
+            class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <textarea required name="details" rows="5"
-            placeholder="Rooms, stairs, traffic lanes, pet stains, etc…"
-            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"></textarea>
+          <!-- Address -->
+          <input
+            required
+            name="address"
+            placeholder="Service address (street, unit #)"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          />
 
-          <button type="submit"
-            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400">
-            Email My Request
+          <!-- Rooms & extras -->
+          <div class="grid gap-4 sm:grid-cols-2 sm:col-span-2">
+            <select
+              name="rooms_included"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            >
+              <option value="" disabled selected>
+                Rooms included in $159 special (up to 3)
+              </option>
+              <option value="1 room">1 room</option>
+              <option value="2 rooms">2 rooms</option>
+              <option value="3 rooms">3 rooms</option>
+            </select>
+
+            <select
+              name="extra_rooms"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            >
+              <option value="" disabled selected>
+                Any additional rooms?
+              </option>
+              <option value="No extra rooms">No extra rooms</option>
+              <option value="1 extra room">1 extra room</option>
+              <option value="2 extra rooms">2 extra rooms</option>
+              <option value="3+ extra rooms">3+ extra rooms</option>
+            </select>
+          </div>
+
+          <!-- Stairs & pets -->
+          <div class="grid gap-4 sm:grid-cols-2 sm:col-span-2">
+            <select
+              name="stairs"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            >
+              <option value="" disabled selected>
+                Stairs to be cleaned?
+              </option>
+              <option value="No stairs">No stairs</option>
+              <option value="1 flight of stairs">1 flight of stairs</option>
+              <option value="2+ flights of stairs">2+ flights of stairs</option>
+            </select>
+
+            <select
+              name="pet_stains"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            >
+              <option value="" disabled selected>
+                Pet stains / odors?
+              </option>
+              <option value="No pet issues">No pet issues</option>
+              <option value="A few spots">A few spots</option>
+              <option value="Heavy pet stains / odor">Heavy pet stains / odor</option>
+            </select>
+          </div>
+
+          <!-- Preferred time -->
+          <div class="grid gap-4 sm:grid-cols-2 sm:col-span-2">
+            <input
+              required
+              type="date"
+              name="preferred_date"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            />
+
+            <select
+              name="preferred_time"
+              class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 w-full"
+            >
+              <option value="" disabled selected>
+                Preferred time window
+              </option>
+              <option value="Flexible">Flexible</option>
+              <option value="Morning (8–12)">Morning (8–12)</option>
+              <option value="Afternoon (12–4)">Afternoon (12–4)</option>
+              <option value="Evening (4–7)">Evening (4–7)</option>
+            </select>
+          </div>
+
+          <!-- Extra details -->
+          <textarea
+            name="notes"
+            rows="4"
+            placeholder="Anything else we should know? (parking, large furniture, previous cleaning, special concerns, etc.)"
+            class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="sm:col-span-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400"
+          >
+            Submit My $159 Cleaning Request
           </button>
         </form>
       </div>
@@ -174,3 +287,4 @@
 
 </body>
 </html>
+
