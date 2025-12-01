@@ -28,7 +28,7 @@
   <style>
     :root { color-scheme: dark; }
 
-    /* FORCE DROPDOWN TEXT TO BE VISIBLE */
+    /* Make dropdown text visible */
     select,
     select option {
       color: #f9fafb;
@@ -168,12 +168,13 @@
             class="sm:col-span-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
           />
 
-          <!-- YES/NO Add-ons with labels -->
+          <!-- Additional rooms YES/NO -->
           <div class="sm:col-span-2 space-y-1">
             <label class="text-sm text-white/70">
               Any additional rooms beyond the 3 included?
             </label>
             <select
+              id="additional_rooms"
               name="additional_rooms"
               class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
             >
@@ -183,6 +184,38 @@
             </select>
           </div>
 
+          <!-- Extra rooms follow-up (shown only if Yes) -->
+          <div id="extra-rooms-details" class="sm:col-span-2 space-y-4 hidden">
+            <div class="space-y-1">
+              <label class="text-sm text-white/70">
+                How many additional rooms?
+              </label>
+              <select
+                name="extra_rooms_count"
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+              >
+                <option value="" disabled selected>Select one</option>
+                <option value="1 extra room">1 extra room</option>
+                <option value="2 extra rooms">2 extra rooms</option>
+                <option value="3 extra rooms">3 extra rooms</option>
+                <option value="4+ extra rooms">4+ extra rooms</option>
+              </select>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-sm text-white/70">
+                Approximate square footage of additional rooms
+              </label>
+              <textarea
+                name="extra_rooms_sqft"
+                rows="3"
+                placeholder="Example: Bedroom ~120 sq ft; office ~150 sq ft; basement ~300 sq ft."
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Stairs YES/NO -->
           <div class="sm:col-span-2 space-y-1">
             <label class="text-sm text-white/70">
               Stairs to be cleaned?
@@ -197,6 +230,7 @@
             </select>
           </div>
 
+          <!-- Pet stains YES/NO -->
           <div class="sm:col-span-2 space-y-1">
             <label class="text-sm text-white/70">
               Pet stains or odor issues?
@@ -211,19 +245,42 @@
             </select>
           </div>
 
-          <!-- Preferred Date & Time -->
+          <!-- Preferred Dates -->
           <div class="sm:col-span-2 space-y-1">
             <label class="text-sm text-white/70">
-              Preferred service date
+              Preferred service date #1 (first choice)
             </label>
             <input
               required
               type="date"
-              name="preferred_date"
+              name="preferred_date_1"
               class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
             />
           </div>
 
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Preferred service date #2 (optional)
+            </label>
+            <input
+              type="date"
+              name="preferred_date_2"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            />
+          </div>
+
+          <div class="sm:col-span-2 space-y-1">
+            <label class="text-sm text-white/70">
+              Preferred service date #3 (optional)
+            </label>
+            <input
+              type="date"
+              name="preferred_date_3"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            />
+          </div>
+
+          <!-- Preferred Time Window -->
           <div class="sm:col-span-2 space-y-1">
             <label class="text-sm text-white/70">
               Preferred time window
@@ -280,7 +337,26 @@
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear()
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Show/hide extra rooms follow-up based on YES/NO selection
+    document.addEventListener('DOMContentLoaded', function () {
+      const additionalRoomsSelect = document.getElementById('additional_rooms');
+      const extraRoomsDetails = document.getElementById('extra-rooms-details');
+
+      if (!additionalRoomsSelect || !extraRoomsDetails) return;
+
+      function toggleExtraRooms() {
+        if (additionalRoomsSelect.value === 'Yes') {
+          extraRoomsDetails.classList.remove('hidden');
+        } else {
+          extraRoomsDetails.classList.add('hidden');
+        }
+      }
+
+      additionalRoomsSelect.addEventListener('change', toggleExtraRooms);
+      toggleExtraRooms();
+    });
   </script>
 
 </body>
