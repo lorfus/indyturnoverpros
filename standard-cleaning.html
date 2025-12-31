@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standard House Cleaning — Indy Turnover Pros</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="Professional standard house cleaning in Indianapolis. Kitchens, bathrooms, bedrooms, and living areas. Clear scope, reliable results, and optional deep clean or move-out upgrades." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: { 500: '#3c8bff', 400: '#5aa5ff' },
+            night: '#0b1220'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+  </style>
+</head>
+
+<body class="bg-night text-white font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-night/80 border-b border-white/10 z-40">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-between py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.png" alt="Indy Turnover Pros Logo" class="h-9 w-auto" />
+        <span class="text-xl font-extrabold tracking-tight">Indy Turnover Pros</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html#services">Services</a>
+        <a href="carpet-cleaning.html">Carpet Cleaning</a>
+        <a href="standard-cleaning.html" class="text-brand-400 font-semibold">Standard Cleaning</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO + SHORT FORM (ABOVE THE FOLD) -->
+  <section class="py-14 lg:py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
+      <!-- COPY / TRUST -->
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-400">
+          Standard House Cleaning
+        </p>
+
+        <h1 class="mt-3 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
+          Reliable <span class="text-brand-400">Standard Cleaning</span> for Homes & Rentals
+        </h1>
+
+        <p class="mt-5 text-white/70 text-lg max-w-xl">
+          A professional, consistent clean for kitchens, bathrooms, bedrooms, and living areas —
+          without paying deep-clean pricing when you don’t need it.
+        </p>
+
+        <ul class="mt-6 space-y-2 text-sm text-white/70">
+          <li>• Kitchens: counters, sink, exterior appliance wipe-down, floors.</li>
+          <li>• Bathrooms: toilet, sink, tub/shower surfaces, mirrors, floors.</li>
+          <li>• Living areas & bedrooms: dusting, vacuuming, sweep & mop as needed.</li>
+        </ul>
+
+        <p class="mt-5 text-sm text-white/60">
+          <span class="font-semibold text-white">Upgrades available:</span>
+          deep cleaning, move-out / turnover cleaning, and carpet cleaning.
+        </p>
+
+        <div class="mt-6 text-sm text-white/60">
+          <p class="font-semibold text-white">John — Owner / Admin</p>
+          <a href="mailto:john@indyturnoverpros.com" class="text-brand-400">
+            john@indyturnoverpros.com
+          </a>
+        </div>
+      </div>
+
+      <!-- MICRO-COMMITMENT FORM -->
+      <div class="lg:justify-self-end w-full max-w-md">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <h2 class="text-xl font-bold">
+            Get Pricing or Ask a Question
+          </h2>
+          <p class="mt-2 text-sm text-white/70">
+            Quick form. No pressure. We’ll follow up within one business day to confirm details and pricing.
+          </p>
+
+          <!-- SECURE FORM: POSTS VIA HTTPS TO WEB3FORMS -->
+          <form
+            class="mt-6 space-y-4"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <!-- REQUIRED BY WEB3FORMS -->
+            <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c" />
+            <input type="hidden" name="subject" value="Standard Cleaning - Pricing / Question" />
+            <input type="hidden" name="from_name" value="Indy Turnover Pros Website" />
+            <input type="hidden" name="service" value="Standard House Cleaning" />
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
+                Name
+              </label>
+              <input
+                required
+                name="name"
+                placeholder="First and last name"
+                class="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
+                Best way to reach you
+              </label>
+              <input
+                required
+                name="contact"
+                placeholder="Email or mobile number"
+                class="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
+              />
+              <p class="mt-1 text-xs text-white/50">
+                We’ll only use this to follow up about your cleaning.
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
+                Property type (optional)
+              </label>
+              <select
+                name="property_type"
+                class="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
+              >
+                <option value="" selected>Select one (optional)</option>
+                <option value="Home / house">Home / house</option>
+                <option value="Apartment / condo">Apartment / condo</option>
+                <option value="Rental / turnover">Rental / turnover</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
+                What are you looking for?
+              </label>
+              <div class="space-y-2 text-sm">
+                <label class="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="interest_type"
+                    value="Standard cleaning pricing"
+                    class="h-4 w-4 rounded border-white/30 bg-white/10"
+                    checked
+                  />
+                  <span>Standard cleaning pricing</span>
+                </label>
+                <label class="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="interest_type"
+                    value="Move-out / turnover cleaning"
+                    class="h-4 w-4 rounded border-white/30 bg-white/10"
+                  />
+                  <span>Move-out / turnover cleaning</span>
+                </label>
+                <label class="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="interest_type"
+                    value="Deep clean upgrade"
+                    class="h-4 w-4 rounded border-white/30 bg-white/10"
+                  />
+                  <span>Deep clean upgrade</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
+                Details (so we can quote accurately)
+              </label>
+              <textarea
+                required
+                name="details"
+                rows="3"
+                placeholder="Example: 3 bed / 2 bath, about 1,800 sq ft. Standard clean. Prefer afternoons."
+                class="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold hover:bg-brand-400 transition-colors"
+            >
+              Request Standard Cleaning Pricing
+            </button>
+
+            <p class="mt-2 text-[11px] text-white/50">
+              What happens next: we’ll review your request and personally follow up within one business day. No pressure.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CLEAN / SERVICE CARDS -->
+  <section class="py-16 lg:py-20 border-t border-white/5" id="services">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">What’s Included in a Standard Clean</h2>
+      <p class="mt-3 text-white/70 max-w-xl">
+        A consistent, professional clean for the areas that matter most — perfect for regular upkeep.
+      </p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Kitchen Surfaces</div>
+          <p class="mt-2 text-white/70">Counters, sink, exterior appliances, and floor cleaning.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Bathrooms</div>
+          <p class="mt-2 text-white/70">Toilet, sink, mirrors, and tub/shower surface cleaning.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Dusting & Touchpoints</div>
+          <p class="mt-2 text-white/70">Tables, shelves, and common touch areas wiped down.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Vacuuming</div>
+          <p class="mt-2 text-white/70">Carpets and rugs vacuumed throughout cleaned areas.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Sweeping & Mopping</div>
+          <p class="mt-2 text-white/70">Hard floors swept and mopped for a clean finish.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <div class="text-lg font-semibold">Optional Add-Ons</div>
+          <p class="mt-2 text-white/70">Deep clean, move-out/turnover, and carpet cleaning available.</p>
+        </div>
+      </div>
+
+      <!-- Scope clarity (prevents expectation issues) -->
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="text-lg font-semibold">Scope & Expectations (Standard Clean)</div>
+        <p class="mt-2 text-white/70 text-sm">
+          Standard cleaning focuses on visible surfaces and common living areas. For heavy buildup, inside appliances,
+          inside cabinets, or detailed baseboard work, request a deep clean or move-out/turnover upgrade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-10 text-center text-white/60 text-sm">
+    © <span id="y"></span> Indy Turnover Pros
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
