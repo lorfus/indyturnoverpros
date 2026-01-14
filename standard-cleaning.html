@@ -3,22 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Standard House Cleaning — Indy Turnover Pros</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-  <meta name="description" content="Professional standard house cleaning in Indianapolis for homes and small rentals. Kitchens, bathrooms, bedrooms, and living areas. Free in-person consultation." />
-
-  <!-- Fonts -->
+  <title>Indy Turnover Pros — Standard Cleaning | Free Consultation</title>
+  <meta name="description" content="Standard home cleaning in Indianapolis. Request a free consultation and a clear, no-pressure quote. Locally owned, straightforward service."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
       theme: {
@@ -27,212 +17,411 @@
           colors: {
             brand: { 500: '#3c8bff', 400: '#5aa5ff' },
             night: '#0b1220'
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(90,165,255,.35), 0 18px 50px rgba(0,0,0,.55)"
           }
         }
       }
     }
   </script>
-
-  <!-- HARD DARK-MODE FIX FOR SELECT / OPTION -->
   <style>
     :root { color-scheme: dark; }
-
-    select,
-    option {
-      background-color: #0b1220 !important;
-      color: #ffffff !important;
-    }
-
-    select { color-scheme: dark; }
-
-    option:checked,
-    option:hover {
-      background-color: #3c8bff !important;
-      color: #ffffff !important;
-    }
   </style>
 </head>
 
 <body class="bg-night text-white font-sans antialiased">
 
-<!-- NAVBAR -->
-<header class="sticky top-0 bg-night/80 border-b border-white/10 z-40">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-between py-4">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="logo.png" alt="Indy Turnover Pros Logo" class="h-9 w-auto" />
-      <span class="text-xl font-extrabold tracking-tight">Indy Turnover Pros</span>
-    </a>
-
-    <nav class="hidden md:flex items-center gap-8 text-sm">
-      <a href="index.html#services">Services</a>
-      <a href="carpet-cleaning.html">Carpet Cleaning</a>
-      <a href="standard-cleaning.html" class="text-brand-400 font-semibold">Standard Cleaning</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO + FORM -->
-<section class="py-14 lg:py-20">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
-
-    <!-- COPY -->
-    <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-400">
-        Standard House Cleaning
-      </p>
-
-      <h1 class="mt-3 text-4xl sm:text-5xl font-black leading-tight tracking-tight">
-        Professional <span class="text-brand-400">Standard Cleaning</span><br>
-        for Homes & Rentals
-      </h1>
-
-      <p class="mt-5 text-white/70 text-lg max-w-xl">
-        A reliable, professional clean for kitchens, bathrooms, bedrooms, and living areas —
-        without paying deep-clean pricing when you don’t need it.
-      </p>
-
-      <ul class="mt-6 space-y-2 text-sm text-white/70">
-        <li>• Kitchen surfaces, sink, exterior appliances, floors</li>
-        <li>• Bathrooms: toilet, sink, mirrors, tub/shower surfaces</li>
-        <li>• Bedrooms & living areas: dusting, vacuuming, sweep & mop</li>
-      </ul>
-
-      <p class="mt-5 text-sm text-white/60">
-        <span class="font-semibold text-white">Upgrades available:</span>
-        deep cleaning, move-out / turnover cleaning, and carpet cleaning.
-      </p>
-
-      <div class="mt-6 text-sm text-white/60">
-        <p class="font-semibold text-white">John — Owner / Admin</p>
-        <a href="mailto:john@indyturnoverpros.com" class="text-brand-400">
-          john@indyturnoverpros.com
-        </a>
-      </div>
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-night/80 border-b border-white/10 z-40 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-between py-4">
+      <a href="/" class="flex items-center gap-3">
+        <img src="logo.png" alt="Indy Turnover Pros Logo" class="h-9 w-auto" />
+        <span class="text-xl font-extrabold tracking-tight">Indy Turnover Pros</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <a class="hover:text-white" href="/index.html#services">Services</a>
+        <a class="hover:text-white" href="standard-cleaning.html">Standard Cleaning</a>
+        <a class="hover:text-white" href="carpet-cleaning.html">Carpet Cleaning</a>
+        <a class="hover:text-white" href="#consult">Free Consultation</a>
+      </nav>
+      <a href="#consult" class="hidden md:inline-flex items-center justify-center rounded-2xl bg-brand-500 px-4 py-2 text-sm font-semibold text-night hover:bg-brand-400 transition">
+        Request Consultation
+      </a>
     </div>
+  </header>
 
-    <!-- FORM -->
-    <div class="lg:justify-self-end w-full max-w-md">
-      <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
-        <h2 class="text-xl font-bold">
-          Request a Free Cleaning Consultation
-        </h2>
+  <!-- HERO -->
+  <section id="top" class="py-14 lg:py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70">
+          <span class="h-2 w-2 rounded-full bg-brand-400"></span>
+          Standard home cleaning • Indianapolis & nearby
+        </div>
 
-        <p class="mt-2 text-sm text-white/70">
-          For new clients, we start with a quick, free in-person consultation.
-          No pressure. No obligation.
+        <h1 class="mt-5 text-5xl font-black leading-tight tracking-tight">
+          A clean home — without the awkward “booking pressure.”
+        </h1>
+
+        <p class="mt-5 text-white/70 text-lg max-w-xl">
+          Request a <span class="text-white font-semibold">free consultation</span>.
+          We’ll confirm your needs, give you a clear scope and price, and you decide from there.
         </p>
 
-        <form
-          class="mt-6 space-y-4"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-        >
-          <!-- Web3Forms -->
-          <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c" />
-          <input type="hidden" name="subject" value="Standard Cleaning — Free Consultation" />
-          <input type="hidden" name="from_name" value="Indy Turnover Pros Website" />
-          <input type="hidden" name="service" value="Standard House Cleaning" />
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
-              Name
-            </label>
-            <input
-              required
-              name="name"
-              placeholder="First and last name"
-              class="w-full rounded-2xl border border-white/10 bg-white/10 text-white px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
-            />
+        <!-- trust bullets -->
+        <div class="mt-6 grid gap-3 sm:grid-cols-2 text-sm text-white/70">
+          <div class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-xl bg-white/5 border border-white/10">✓</span>
+            <div><span class="font-semibold text-white/80">Locally owned</span> and accountable</div>
           </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
-              Best way to reach you
-            </label>
-            <input
-              required
-              name="contact"
-              placeholder="Email or mobile number"
-              class="w-full rounded-2xl border border-white/10 bg-white/10 text-white px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
-            />
-            <p class="mt-1 text-xs text-white/50">
-              We’ll only use this to follow up about your cleaning.
-            </p>
+          <div class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-xl bg-white/5 border border-white/10">✓</span>
+            <div><span class="font-semibold text-white/80">Straightforward scopes</span> (no gimmicks)</div>
           </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
-              Property type (optional)
-            </label>
-            <select
-              name="property_type"
-              class="w-full rounded-2xl border border-white/10 bg-night text-white px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
-            >
-              <option value="">Select one (optional)</option>
-              <option value="Home / house">Home / house</option>
-              <option value="Apartment / condo">Apartment / condo</option>
-              <option value="Rental / turnover">Rental / turnover</option>
-            </select>
+          <div class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-xl bg-white/5 border border-white/10">✓</span>
+            <div><span class="font-semibold text-white/80">Optional walkthrough</span> for trust & clarity</div>
           </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
-              What are you looking for?
-            </label>
-            <div class="space-y-2 text-sm">
-              <label class="flex items-center gap-2">
-                <input type="radio" name="interest_type" value="Standard cleaning" checked>
-                <span>Standard cleaning</span>
-              </label>
-              <label class="flex items-center gap-2">
-                <input type="radio" name="interest_type" value="Move-out / turnover">
-                <span>Move-out / turnover cleaning</span>
-              </label>
-              <label class="flex items-center gap-2">
-                <input type="radio" name="interest_type" value="Deep clean">
-                <span>Deep clean upgrade</span>
-              </label>
-            </div>
+          <div class="flex gap-3">
+            <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-xl bg-white/5 border border-white/10">✓</span>
+            <div><span class="font-semibold text-white/80">Text/call friendly</span> — real person</div>
           </div>
+        </div>
 
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wide text-white/60 mb-1">
-              Details
-            </label>
-            <textarea
-              required
-              name="details"
-              rows="3"
-              placeholder="Example: 3 bed / 2 bath, ~1,800 sq ft. Standard clean. Prefer afternoons."
-              class="w-full rounded-2xl border border-white/10 bg-white/10 text-white px-4 py-3 text-sm outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold hover:bg-brand-400 transition-colors"
-          >
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#consult" class="inline-flex items-center justify-center rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold text-night hover:bg-brand-400 transition">
             Request a Free Consultation
-          </button>
+          </a>
+          <a href="tel:+13174069842" class="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
+            Call/Text: (317) 406-9842
+          </a>
+        </div>
 
-          <p class="mt-2 text-[11px] text-white/50">
-            What happens next: we’ll review your request and personally follow up within one business day.
-          </p>
-        </form>
+        <p class="mt-3 text-xs text-white/50">
+          Not a booking. No obligation. We confirm details before scheduling.
+        </p>
+      </div>
+
+      <!-- RIGHT: simple visual -->
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-glow">
+        <div class="text-sm text-white/70">Most-requested service</div>
+        <div class="mt-2 text-2xl font-extrabold">Standard Cleaning</div>
+        <div class="mt-4 grid gap-3 text-sm text-white/70">
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-white/5 border border-white/10">🧼</span>
+            <div><span class="font-semibold text-white/80">Kitchen & bathrooms</span> (surfaces, fixtures, sinks, floors)</div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-white/5 border border-white/10">🧹</span>
+            <div><span class="font-semibold text-white/80">Living areas & bedrooms</span> (vacuum/mop, dusting, reset)</div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-white/5 border border-white/10">✨</span>
+            <div><span class="font-semibold text-white/80">Finish touches</span> (trash gather as scoped, final look-over)</div>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-white/10 bg-night/40 p-4">
+          <div class="text-xs text-white/60">Perfect for:</div>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Busy homeowners</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Recurring clean</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Move-in prep</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Rental refresh</span>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- WHAT NEEDS CLEANING -->
+  <section class="py-12 lg:py-16 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-extrabold">What needs attention?</h2>
+        <p class="mt-3 text-white/70">
+          Tap what applies — it helps us estimate time and give you a clean scope.
+        </p>
+      </div>
 
-<footer class="border-t border-white/10 py-10 text-center text-white/60 text-sm">
-  © <span id="y"></span> Indy Turnover Pros
-</footer>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Each card toggles a hidden checkbox -->
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Kitchen (counters, sink, appliance exterior)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🍽️</div>
+            <div class="font-semibold">Kitchen</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Counters, sink, exterior wipe-downs, floors.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Bathrooms (toilets, sinks, tub/shower)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🚿</div>
+            <div class="font-semibold">Bathrooms</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Toilets, mirrors, sinks, tub/shower, floors.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Bedrooms & Living Areas (vacuum/mop, dusting)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🛋️</div>
+            <div class="font-semibold">Living Areas</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Vacuum/mop, surfaces, tidy reset.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Floors focus (mop/vacuum, edges, traffic areas)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🧽</div>
+            <div class="font-semibold">Floors Focus</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Extra attention on edges & traffic lanes.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Pet hair / dander considerations" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🐾</div>
+            <div class="font-semibold">Pet Hair</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Helps us bring the right tools and time.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Inside fridge/oven (optional add-on)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🔥</div>
+            <div class="font-semibold">Fridge/Oven</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Optional add-on for heavier kitchen work.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Inside cabinets/drawers (optional add-on)" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🗄️</div>
+            <div class="font-semibold">Cabinets</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Optional detail work (inside surfaces).
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+
+        <label class="group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
+          <input type="checkbox" class="peer sr-only" data-pick="Move-in / Move-out cleaning" />
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">📦</div>
+            <div class="font-semibold">Move-in/Out</div>
+          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
+            Empty homes/apartments — faster, clearer scope.
+          </div>
+          <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
+            <span class="peer-checked:hidden">Click to select</span>
+            <span class="hidden peer-checked:inline">Selected ✓</span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT / FORM -->
+  <section id="consult" class="py-16 lg:py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl font-extrabold">Request a Free Consultation</h2>
+        <p class="mt-3 text-white/70 text-sm sm:text-base max-w-xl">
+          Tell us the basics. We’ll reach out to confirm details and offer either a quick phone consult
+          or an in-person walkthrough — whichever you prefer.
+        </p>
+
+        <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
+          <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-6 sm:grid-cols-2">
+            <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c">
+            <input type="hidden" name="subject" value="New Standard Cleaning Consultation Request">
+            <input type="hidden" id="selected_services" name="selected_services" value="">
+
+            <!-- Name -->
+            <div>
+              <label class="block text-sm font-medium text-white/80">Your Name</label>
+              <input type="text" name="name" required
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
+                placeholder="First & last name">
+            </div>
+
+            <!-- Phone (new) -->
+            <div>
+              <label class="block text-sm font-medium text-white/80">Phone (best for texting)</label>
+              <input type="tel" name="phone"
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
+                placeholder="(317) ___-____">
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-sm font-medium text-white/80">Email</label>
+              <input type="email" name="email" required
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
+                placeholder="you@email.com">
+            </div>
+
+            <!-- Preference -->
+            <div>
+              <label class="block text-sm font-medium text-white/80">Preferred consult</label>
+              <select name="consult_preference"
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400">
+                <option value="Text first">Text first</option>
+                <option value="Quick phone call">Quick phone call</option>
+                <option value="In-person walkthrough">In-person walkthrough</option>
+                <option value="No preference">No preference</option>
+              </select>
+            </div>
+
+            <!-- Address / Area -->
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-white/80">Address or general area</label>
+              <input type="text" name="location"
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
+                placeholder="Neighborhood or address (optional if you’re not ready to share yet)">
+              <p class="mt-2 text-xs text-white/50">
+                Totally okay to give a neighborhood/zip at first — we can confirm the address later.
+              </p>
+            </div>
+
+            <!-- Details -->
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-white/80">Anything we should know?</label>
+              <textarea name="details" rows="4" required
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
+                placeholder="How many beds/baths? Any pets? Any areas you want prioritized?"></textarea>
+              <p class="mt-2 text-xs text-white/50">
+                This is a request for a consultation — not a confirmed appointment.
+              </p>
+            </div>
+
+            <!-- Button row -->
+            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <button type="submit"
+                class="inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-night hover:bg-brand-400 transition">
+                Request Consultation
+              </button>
+              <div class="text-xs text-white/60">
+                Prefer direct contact? Call/text <a class="text-brand-400 hover:text-brand-300" href="tel:+13174069842">(317) 406-9842</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- SIDE CARD -->
+      <div class="space-y-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="text-lg font-bold">How it works</div>
+          <ol class="mt-4 space-y-3 text-sm text-white/70">
+            <li><span class="font-semibold text-white/80">1)</span> You request a free consultation</li>
+            <li><span class="font-semibold text-white/80">2)</span> We confirm scope + timing (text/phone or walkthrough)</li>
+            <li><span class="font-semibold text-white/80">3)</span> You get a clear quote — you decide</li>
+          </ol>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="text-lg font-bold">Contact</div>
+          <div class="mt-4 space-y-3 text-sm">
+            <div>
+              <div class="font-semibold">John — Admin / Client Relations</div>
+              <a href="mailto:john@indyturnoverpros.com" class="text-brand-400 hover:text-brand-300">
+                john@indyturnoverpros.com
+              </a>
+            </div>
+            <div>
+              <a href="tel:+13174069842" class="text-brand-400 hover:text-brand-300">(317) 406-9842</a>
+              <div class="text-white/60 text-xs">Call or text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="text-lg font-bold">Service area</div>
+          <p class="mt-3 text-sm text-white/70">
+            Indianapolis + nearby (Carmel, Greenwood, Plainfield, Avon, Fishers).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-10 text-center text-white/60 text-sm">
+    © <span id="y"></span> Indy Turnover Pros
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+
+    // Collect selected "What needs attention?" picks and write them to hidden input for Web3Forms
+    const hidden = document.getElementById('selected_services')
+    const pickInputs = Array.from(document.querySelectorAll('input[data-pick]'))
+
+    function updateSelected() {
+      const picks = pickInputs
+        .filter(i => i.checked)
+        .map(i => i.getAttribute('data-pick'))
+      hidden.value = picks.join('; ')
+    }
+    pickInputs.forEach(i => i.addEventListener('change', updateSelected))
+    updateSelected()
+  </script>
 
 </body>
 </html>
+
