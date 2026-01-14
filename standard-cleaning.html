@@ -27,8 +27,22 @@
       }
     }
   </script>
+
   <style>
     :root { color-scheme: dark; }
+
+    /* FIX: make dropdown options visible across browsers */
+    select {
+      color: #ffffff;
+      background-color: rgba(255,255,255,0.05);
+    }
+    select option {
+      color: #ffffff;
+      background-color: #0b1220;
+    }
+    select option:disabled {
+      color: rgba(255,255,255,0.55);
+    }
   </style>
 </head>
 
@@ -88,7 +102,7 @@
           </div>
           <div class="flex gap-3">
             <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-xl bg-white/5 border border-white/10">✓</span>
-            <div><span class="font-semibold text-white/80">Text/call friendly</span> — real person</div>
+            <div><span class="font-semibold text-white/80">Direct contact</span> — real person</div>
           </div>
         </div>
 
@@ -123,16 +137,6 @@
             <div><span class="font-semibold text-white/80">Finish touches</span> (trash gather as scoped, final look-over)</div>
           </div>
         </div>
-
-        <div class="mt-6 rounded-2xl border border-white/10 bg-night/40 p-4">
-          <div class="text-xs text-white/60">Perfect for:</div>
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Busy homeowners</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Recurring clean</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Move-in prep</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Rental refresh</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -154,9 +158,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🍽️</div>
             <div class="font-semibold">Kitchen</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Counters, sink, exterior wipe-downs, floors.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Counters, sink, exterior wipe-downs, floors.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -169,9 +171,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🚿</div>
             <div class="font-semibold">Bathrooms</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Toilets, mirrors, sinks, tub/shower, floors.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Toilets, mirrors, sinks, tub/shower, floors.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -184,9 +184,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🛋️</div>
             <div class="font-semibold">Living Areas</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Vacuum/mop, surfaces, tidy reset.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Vacuum/mop, surfaces, tidy reset.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -199,9 +197,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🧽</div>
             <div class="font-semibold">Floors Focus</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Extra attention on edges & traffic lanes.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Extra attention on edges & traffic lanes.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -214,9 +210,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🐾</div>
             <div class="font-semibold">Pet Hair</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Helps us bring the right tools and time.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Helps us bring the right tools and time.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -229,9 +223,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🔥</div>
             <div class="font-semibold">Fridge/Oven</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Optional add-on for heavier kitchen work.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Optional add-on for heavier kitchen work.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -244,9 +236,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">🗄️</div>
             <div class="font-semibold">Cabinets</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Optional detail work (inside surfaces).
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Optional detail work (inside surfaces).</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -259,9 +249,7 @@
             <div class="h-11 w-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">📦</div>
             <div class="font-semibold">Move-in/Out</div>
           </div>
-          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">
-            Empty homes/apartments — faster, clearer scope.
-          </div>
+          <div class="mt-3 text-sm text-white/60 group-hover:text-white/70">Empty homes/apartments — faster, clearer scope.</div>
           <div class="mt-4 text-xs text-white/50 peer-checked:text-brand-400">
             <span class="peer-checked:hidden">Click to select</span>
             <span class="hidden peer-checked:inline">Selected ✓</span>
@@ -287,11 +275,8 @@
                 method="POST"
                 class="grid gap-6 sm:grid-cols-2">
 
-            <!-- Web3Forms -->
             <input type="hidden" name="access_key" value="91e026bb-cbfc-412e-bfbe-2adac71ae37c">
             <input type="hidden" name="subject" value="New Standard Cleaning Consultation Request">
-
-            <!-- Hidden field for icon tile picks -->
             <input type="hidden" id="selected_services" name="selected_services" value="">
 
             <!-- Name -->
@@ -299,20 +284,15 @@
               <label class="block text-sm font-medium text-white/80">Your Name</label>
               <input type="text" name="name" required
                 class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
-                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
-                placeholder="First & last name">
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400">
             </div>
 
-            <!-- Phone (any area code) -->
+            <!-- Phone -->
             <div>
-              <label class="block text-sm font-medium text-white/80">Phone (any area code)</label>
+              <label class="block text-sm font-medium text-white/80">Phone</label>
               <input type="tel" name="phone" inputmode="tel" autocomplete="tel"
                 class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
-                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
-                placeholder="Optional — if you prefer text/call">
-              <p class="mt-2 text-xs text-white/50">
-                Not restricted to 317 — any area code is fine.
-              </p>
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400">
             </div>
 
             <!-- Email -->
@@ -320,43 +300,36 @@
               <label class="block text-sm font-medium text-white/80">Email</label>
               <input type="email" name="email" required
                 class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
-                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
-                placeholder="you@email.com">
+                       focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400">
             </div>
 
-            <!-- Preferred contact (fixed dropdown options) -->
+            <!-- Contact Preference -->
             <div>
               <label class="block text-sm font-medium text-white/80">How should we reach you?</label>
               <select name="contact_preference" required
-                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white
+                class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm
                        focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400">
                 <option value="" disabled selected>Select one</option>
-                <option value="Text me (fastest)">Text me (fastest)</option>
+                <option value="Text me">Text me</option>
                 <option value="Call me">Call me</option>
                 <option value="Email me">Email me</option>
                 <option value="No preference">No preference</option>
               </select>
-              <p class="mt-2 text-xs text-white/50">
-                “Text me” just means we’ll start with a quick text to confirm details — not a booking.
-              </p>
             </div>
 
-            <!-- City / Town + ZIP (replaces address) -->
+            <!-- City / Town + ZIP -->
             <div class="sm:col-span-2">
               <label class="block text-sm font-medium text-white/80">City / Town</label>
               <div class="mt-2 grid gap-4 sm:grid-cols-2">
-                <input type="text" name="city"
+                <input type="text" name="city" required
                   class="block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
                          focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
-                  placeholder="e.g. Carmel, Fishers, Greenwood">
-                <input type="text" name="zip"
+                  placeholder="Carmel, Fishers, Greenwood, etc.">
+                <input type="text" name="zip" required
                   class="block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
                          focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
-                  placeholder="ZIP (optional)">
+                  placeholder="ZIP">
               </div>
-              <p class="mt-2 text-xs text-white/50">
-                No address needed here — we’ll get the exact address when we schedule.
-              </p>
             </div>
 
             <!-- Details -->
@@ -366,12 +339,8 @@
                 class="mt-2 block w-full rounded-2xl bg-white/5 border border-white/15 px-3 py-2.5 text-sm text-white placeholder-white/40
                        focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400"
                 placeholder="Beds/baths, pets, priorities, timing, anything important."></textarea>
-              <p class="mt-2 text-xs text-white/50">
-                This is a request for a consultation — not a confirmed appointment.
-              </p>
             </div>
 
-            <!-- Button row -->
             <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <button type="submit"
                 class="inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-night hover:bg-brand-400 transition">
@@ -392,7 +361,7 @@
           <div class="text-lg font-bold">How it works</div>
           <ol class="mt-4 space-y-3 text-sm text-white/70">
             <li><span class="font-semibold text-white/80">1)</span> You request a free consultation</li>
-            <li><span class="font-semibold text-white/80">2)</span> We confirm scope + timing (text/call/email)</li>
+            <li><span class="font-semibold text-white/80">2)</span> We confirm scope + timing</li>
             <li><span class="font-semibold text-white/80">3)</span> You get a clear quote — you decide</li>
           </ol>
         </div>
