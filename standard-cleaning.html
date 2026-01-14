@@ -31,18 +31,10 @@
   <style>
     :root { color-scheme: dark; }
 
-    /* FIX: make dropdown options visible across browsers */
-    select {
-      color: #ffffff;
-      background-color: rgba(255,255,255,0.05);
-    }
-    select option {
-      color: #ffffff;
-      background-color: #0b1220;
-    }
-    select option:disabled {
-      color: rgba(255,255,255,0.55);
-    }
+    /* Make dropdown options visible across browsers */
+    select { color: #ffffff; background-color: rgba(255,255,255,0.05); }
+    select option { color: #ffffff; background-color: #0b1220; }
+    select option:disabled { color: rgba(255,255,255,0.55); }
   </style>
 </head>
 
@@ -271,7 +263,31 @@
         </p>
 
         <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
-          <form action="https://api.web3forms.com/submit"
+
+          <!-- SUCCESS (hidden by default) -->
+          <div id="successBox" class="hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow">
+            <div class="flex items-start gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl">✅</div>
+              <div>
+                <div class="text-xl font-extrabold">Request received.</div>
+                <p class="mt-2 text-white/70 text-sm">
+                  Thanks — we’ll reach out to confirm scope + timing.
+                </p>
+                <button id="sendAnother" type="button"
+                  class="mt-4 inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-night hover:bg-brand-400 transition">
+                  Send another request
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ERROR (hidden by default) -->
+          <div id="errorBox" class="hidden mt-4 rounded-3xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-200">
+            Something went wrong submitting the form. Please try again, or call/text (317) 406-9842.
+          </div>
+
+          <form id="consultForm"
+                action="https://api.web3forms.com/submit"
                 method="POST"
                 class="grid gap-6 sm:grid-cols-2">
 
@@ -364,7 +380,7 @@
             </div>
 
             <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <button type="submit"
+              <button id="submitBtn" type="submit"
                 class="inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-night hover:bg-brand-400 transition">
                 Request Consultation
               </button>
@@ -425,40 +441,92 @@
     // Collect selected icon tiles and write them to hidden input for Web3Forms
     const hidden = document.getElementById('selected_services');
     const pickInputs = Array.from(document.querySelectorAll('input[data-pick]'));
-
     function updateSelected() {
-      const picks = pickInputs
-        .filter(i => i.checked)
-        .map(i => i.getAttribute('data-pick'));
+      const picks = pickInputs.filter(i => i.checked).map(i => i.getAttribute('data-pick'));
       hidden.value = picks.join('; ');
     }
-
     pickInputs.forEach(i => i.addEventListener('change', updateSelected));
     updateSelected();
 
     // Phone auto-format to (xxx) xxx-xxxx
     const phone = document.getElementById('phone');
-
     function formatPhoneUS(value) {
       const digits = (value || '').replace(/\D/g, '').slice(0, 10);
       const a = digits.slice(0, 3);
       const b = digits.slice(3, 6);
       const c = digits.slice(6, 10);
-
       if (digits.length <= 3) return a ? `(${a}` : '';
       if (digits.length <= 6) return `(${a}) ${b}`;
       return `(${a}) ${b}-${c}`;
     }
-
-    phone.addEventListener('input', (e) => {
-      const formatted = formatPhoneUS(e.target.value);
-      e.target.value = formatted;
-    });
-
-    // Extra: on blur, enforce full format if they typed 10 digits without symbols
+    phone.addEventListener('input', (e) => { e.target.value = formatPhoneUS(e.target.value); });
     phone.addEventListener('blur', (e) => {
       const digits = (e.target.value || '').replace(/\D/g, '');
       if (digits.length === 10) e.target.value = formatPhoneUS(digits);
+    });
+
+    // AJAX submit to keep user on your site (no Web3Forms success page)
+    const form = document.getElementById('consultForm');
+    const successBox = document.getElementById('successBox');
+    const errorBox = document.getElementById('errorBox');
+    const submitBtn = document.getElementById('submitBtn');
+    const sendAnother = document.getElementById('sendAnother');
+
+    function setSubmitting(isSubmitting) {
+      submitBtn.disabled = isSubmitting;
+      submitBtn.textContent = isSubmitting ? 'Sending…' : 'Request Consultation';
+      submitBtn.classList.toggle('opacity-60', isSubmitting);
+      submitBtn.classList.toggle('cursor-not-allowed', isSubmitting);
+    }
+
+    function showSuccess() {
+      form.classList.add('hidden');
+      errorBox.classList.add('hidden');
+      successBox.classList.remove('hidden');
+    }
+
+    function showError(message) {
+      errorBox.textContent = message || 'Something went wrong submitting the form. Please try again, or call/text (317) 406-9842.';
+      errorBox.classList.remove('hidden');
+    }
+
+    sendAnother.addEventListener('click', () => {
+      successBox.classList.add('hidden');
+      errorBox.classList.add('hidden');
+      form.reset();
+      // keep selections cleared and hidden field updated
+      pickInputs.forEach(i => i.checked = false);
+      updateSelected();
+      setSubmitting(false);
+      form.classList.remove('hidden');
+      // scroll back to form nicely
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Let browser show built-in validation messages (pattern/required/etc.)
+      if (!form.reportValidity()) return;
+
+      setSubmitting(true);
+      errorBox.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: formData });
+        const data = await res.json().catch(() => null);
+
+        if (res.ok && data && data.success) {
+          showSuccess();
+        } else {
+          showError((data && data.message) ? data.message : null);
+          setSubmitting(false);
+        }
+      } catch (err) {
+        showError();
+        setSubmitting(false);
+      }
     });
   </script>
 
